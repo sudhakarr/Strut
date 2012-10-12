@@ -1,25 +1,21 @@
 <div class="navbar navbar-fixed-top menuBar">
   <div class="btn-inverse temp">
     <div class="container">
+        <a class="brand" href="#"><img src="res/img/dashboard_plus.png" alt="Chennai Dashboard"/></a>
      	<ul class="nav">
-     		<li class="dropdown active">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">File<b class="caret"></b></a>
-          <ul class="dropdown-menu">
-              <li data-option="save"><a href="#">Save</a></li>
-          </ul>
-        </li>
-          <li class="dropdown active">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  Edit<b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                  <li data-option="undo"><a href="#">Undo <span class="undoName label"></span></a></li>
-                  <li data-option="redo"><a href="#">Redo <span class="redoName label"></span></a></li>
-                  <li data-option="cut"><a href="#">Cut</a></li>
-                  <li data-option="copy"><a href="#">Copy</a></li>
-                  <li data-option="paste"><a href="#">Paste</a></li>
-              </ul>
-          </li>
+            <li class="action" data-option="save"><a href="#">Save</a></li>
+            <li class="dropdown active">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Edit<b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="action" data-option="undo"><a href="#">Undo <span class="undoName label"></span></a></li>
+                    <li class="action" data-option="redo"><a href="#">Redo <span class="redoName label"></span></a></li>
+                    <li class="action" data-option="cut"><a href="#">Cut</a></li>
+                    <li class="action" data-option="copy"><a href="#">Copy</a></li>
+                    <li class="action" data-option="paste"><a href="#">Paste</a></li>
+                </ul>
+            </li>
      	</ul>
     </div>
   </div>

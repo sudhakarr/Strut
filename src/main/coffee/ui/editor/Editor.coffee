@@ -28,7 +28,7 @@ FileStorage, BackgroundPicker, AutoSaver, Archiver, Service, empty) ->
 				num = parseInt(num)
 
 			localStorage.setItem("StrutNewNum", num+1)
-			
+
 			@model.import(
 				fileName: "presentation-" + num
 				slides: []
@@ -115,12 +115,12 @@ FileStorage, BackgroundPicker, AutoSaver, Archiver, Service, empty) ->
 				})
 				$('#zipModal').modal('show')
 			)
-			
+
 
 	Backbone.View.extend(
 		className: "editor"
 		events:
-			"click .menuBar .dropdown-menu > li": "menuItemSelected"
+			"click .action": "menuItemSelected"
 			"changePerspective": "changePerspective"
 			"preview": "renderPreview"
 
@@ -171,7 +171,7 @@ FileStorage, BackgroundPicker, AutoSaver, Archiver, Service, empty) ->
 							sourceWind.previewWind.imp = sourceWind.previewWind.impress()
 							sourceWind.previewWind.imp.init()
 							sourceWind.previewWind.imp.goto(@model.get("activeSlide").get("num"))
-			
+
 			$(window.previewWind.document).ready(cb)
 			#window.location = "index.html?preview=" + showStr;
 
