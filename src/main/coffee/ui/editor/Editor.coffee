@@ -13,9 +13,10 @@ define(["vendor/amd/backbone",
 		"ui/widgets/BackgroundPicker",
 		"model/common_application/AutoSaver",
 		"model/presentation/Archiver",
+		"ui/widgets/PushToService"
 		"css!./css/Editor.css"],
 (Backbone, SlideEditor, TransitionEditor, Templates, ImpressRenderer, RawTextModal, OpenDialog, SaveAsDialog, \
-FileStorage, BackgroundPicker, AutoSaver, Archiver, empty) ->
+FileStorage, BackgroundPicker, AutoSaver, Archiver, Service, empty) ->
 	editorId = 0
 
 	menuOptions =
@@ -43,11 +44,7 @@ FileStorage, BackgroundPicker, AutoSaver, Archiver, empty) ->
 			)
 		openRecent: (e) ->
 		save: (e) ->
-			fileName = @model.get("fileName")
-			if not fileName?
-				menuOptions.saveAs.call(@, e)
-			else
-				FileStorage.save(fileName, @model.toJSON(false, true))
+			Push(JSON.stringify(@model.toJSON(false, true)))
 
 		saveAs: (e) ->
 			@saveAsDialog.show((fileName) =>

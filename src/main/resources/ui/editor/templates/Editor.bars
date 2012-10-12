@@ -3,19 +3,23 @@
     <div class="container">
      	<ul class="nav">
      		<li class="dropdown active">
-            <li data-option="save"><a href="#">Save</a></li>
-            <li class="dropdown active">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Edit<b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                    <li data-option="undo"><a href="#">Undo <span class="undoName label"></span></a></li>
-                    <li data-option="redo"><a href="#">Redo <span class="redoName label"></span></a></li>
-                    <li data-option="cut"><a href="#">Cut</a></li>
-                    <li data-option="copy"><a href="#">Copy</a></li>
-                    <li data-option="paste"><a href="#">Paste</a></li>
-                </ul>
-            </li>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">File<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+              <li data-option="save"><a href="#">Save</a></li>
+          </ul>
+        </li>
+          <li class="dropdown active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Edit<b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                  <li data-option="undo"><a href="#">Undo <span class="undoName label"></span></a></li>
+                  <li data-option="redo"><a href="#">Redo <span class="redoName label"></span></a></li>
+                  <li data-option="cut"><a href="#">Cut</a></li>
+                  <li data-option="copy"><a href="#">Copy</a></li>
+                  <li data-option="paste"><a href="#">Paste</a></li>
+              </ul>
+          </li>
      	</ul>
     </div>
   </div>
