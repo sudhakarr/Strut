@@ -37,8 +37,15 @@ if not Function.bind? or Function.prototype.bind?
 			fn.apply(ctx, arguments)
 
 if window.location.href.indexOf("preview=true") isnt -1
-	requirejs(["ui/impress_renderer/ImpressRenderer"], (ImpressRenderer) ->
-    window.ImpressRenderer = ImpressRenderer
+		window.slideConfig =
+			size:
+				width: 1024
+				height: 768
+
+  requirejs(["ui/impress_renderer/preview"], (Preview) ->
+    $.get("http://10.16.3.17:3000/template/index", (data) ->
+      Preview.update(data)
+    )
   )
 else
 	continuation = () ->
