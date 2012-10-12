@@ -65,14 +65,9 @@ else
 
 			$("body").append(editor.render())
 
-			lastPres = localStorage.getItem("StrutLastPres")
-			if lastPres?
-				pres = FileStorage.open(lastPres)
-				if pres?
-					deck.import(pres)
-			
-			if not lastPres?
-				deck.newSlide()
+			$.get("http://10.16.3.17:3000/template/index", (data) ->
+        deck.import(JSON.parse(data))
+      )
 		)
 	
 	requirejs(["vendor/amd/backbone",
