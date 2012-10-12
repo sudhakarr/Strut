@@ -3,7 +3,8 @@
 	height: 90px;
 	margin: 0 auto;
 	background: white;
-	margin-top: 20px;
+	margin: 15px;
+    display: inline-block;
 }
 
 .slidePreviewPanel .slideSnapshot .badge:before {

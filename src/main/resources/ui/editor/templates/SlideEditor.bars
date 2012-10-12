@@ -2,14 +2,14 @@
   <div class="navbar-inner buttonBar">
     <div class="container">
         <ul class="nav">
-            <li style="width: 120px">
+            <li style="width: 290px">
             	<div class="btn-group iconBtns newSlide">
-            		<a class="btn btn btn-small menuBarOption" data-option="createSlide" href="#"><i class="icon-plus"></i>Slide</a>
+            		<a class="btn btn btn-small menuBarOption" data-option="createSlide" href="#"><i class="icon-plus"></i>Add News Item</a>
             	</div>
             </li>
             <li class="divider-vertical">
             </li>
-            <li style="width: 120px"></li>
+            <li style="width: 6px"></li>
            <!-- <li>
             	<div class="btn-group normalBtns">
             		<a class="btn btn-inverse dropdown-toggle btn-small disabled fontButton fontFamilyBtn" data-toggle="dropdown" title="Choose the font family"><span class="text">Lato</span><span class="caret"></span></a>
