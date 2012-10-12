@@ -37,7 +37,9 @@ if not Function.bind? or Function.prototype.bind?
 			fn.apply(ctx, arguments)
 
 if window.location.href.indexOf("preview=true") isnt -1
-	# do nothing...
+	requirejs(["ui/impress_renderer/ImpressRenderer"], (ImpressRenderer) ->
+    window.ImpressRenderer = ImpressRenderer
+  )
 else
 	continuation = () ->
 		requirejs(["ui/editor/Editor",
