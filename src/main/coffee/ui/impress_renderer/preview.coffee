@@ -16,5 +16,8 @@ define(["ui/impress_renderer/ImpressRenderer"],
         current = imp.goto(0)
       )
 
-   new Preview()
+  setInterval ( -> 
+    window.impress().next()
+  ), 10000
+  new Preview()
 )
