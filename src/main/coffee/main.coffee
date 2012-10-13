@@ -23,6 +23,8 @@ else if $.browser.webkit
 
 window.URL = window.webkitURL or window.URL
 window.Blob = window.Blob or window.WebKitBlob or window.MozBlob
+window.DATA_READ_URL = "http://localhost:3000/template/index"
+window.DATA_CREATE_URL = "http://localhost:3000/template/create"
 
 if not window.localStorage?
 	window.localStorage =
@@ -43,7 +45,7 @@ if window.location.href.indexOf("preview=true") isnt -1
 				height: 768
 
   requirejs(["ui/impress_renderer/preview"], (Preview) ->
-    $.get("http://10.16.3.17:3000/template/index", (data) ->
+    $.get(window.DATA_READ_URL, (data) ->
       Preview.update(data)
     )
   )
@@ -65,7 +67,7 @@ else
 
 			$("body").append(editor.render())
 
-			$.get("http://10.16.3.17:3000/template/index", (data) ->
+			$.get(window.DATA_READ_URL, (data) ->
         deck.import(JSON.parse(data))
       )
 		)

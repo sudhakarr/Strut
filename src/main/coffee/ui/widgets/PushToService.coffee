@@ -1,6 +1,6 @@
 Push = (json) ->
 	$.ajax({
-		url: 'http://10.16.3.17:3000/template/create',
+		url: window.DATA_CREATE_URL,
 		type: 'post'
 		data: {content: json}
 	});
