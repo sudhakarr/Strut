@@ -19,9 +19,9 @@ define(["ui/impress_renderer/ImpressRenderer"],
     window.impress().next()
   ), 10000
 
-  setInterval ( ->
-    window.preview.update()
-  ), 600000
-
   window.preview = new Preview()
+
+  socket = io.connect(window.BASE_URL)
+  socket.on 'push', window.preview.update
+  window.preview
 )

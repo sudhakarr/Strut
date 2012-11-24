@@ -1,6 +1,3 @@
 Push = (json) ->
-	$.ajax({
-		url: window.DATA_CREATE_URL,
-		type: 'post'
-		data: {content: json}
-	});
+	socket = io.connect('http://localhost:3000')
+	socket.emit('create', {content: json})
