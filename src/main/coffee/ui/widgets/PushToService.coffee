@@ -1,5 +1,5 @@
 Push = (json) ->
-	socket = io.connect('http://localhost:3000')
+	socket = io.connect(window.BASE_URL)
 	socket.emit('create', {content: json})
 	socket.on('error', error_toast)
 	socket.on('success_callback', success_toast)
