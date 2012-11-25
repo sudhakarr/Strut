@@ -8,7 +8,6 @@ define(["ui/impress_renderer/ImpressRenderer"],
         deck.import(JSON.parse(json))
         html = ImpressRenderer.render(deck.attributes)
 
-        console.log(html)
         document.getElementsByTagName("html")[0].innerHTML = html
         window.startImpress(window.document, window)
         imp = window.impress()
@@ -17,12 +16,12 @@ define(["ui/impress_renderer/ImpressRenderer"],
       )
 
   setInterval ( -> 
-		window.impress().next()
+    window.impress().next()
   ), 10000
 
-	setInterval ( ->
-		window.preview.update()
-	), 600000
-
   window.preview = new Preview()
+
+  socket = io.connect(window.BASE_URL)
+  socket.on 'push', window.preview.update
+  window.preview
 )
