@@ -23,7 +23,7 @@ else if $.browser.webkit
 
 window.URL = window.webkitURL or window.URL
 window.Blob = window.Blob or window.WebKitBlob or window.MozBlob
-window.BASE_URL = "http://localhost:3000"
+window.BASE_URL = "http://chennai-dashboard.thoughtworks.com:3000"
 window.DATA_READ_URL = window.BASE_URL + "/template/index"
 
 if not window.localStorage?
